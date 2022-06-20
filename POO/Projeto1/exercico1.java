@@ -7,7 +7,6 @@ public class exercico1 {
     public static void main(String args[]){
         Scanner in = new Scanner(System.in);
 
-        // Declaração de variaveis.
         int c = 0;
         double media = 0;
         double idade = 0;
@@ -16,21 +15,21 @@ public class exercico1 {
 
         while(true){
             idadeAux = in.nextInt();
-            idade += idadeAux;
+            idade += idadeAux; // Somando todas as idades.
 
-            if(idadeAux < 0 && c == 0){ // Codinção para conferir se o primeiro valor é menor que 0.
-            System.out.println("impossivel calcular");
-            negIdade = true;
-            break;
+            if(idadeAux < 0 && c == 0){ // Conferindo se a idade é menor ou igual a 0.
+                System.out.println("impossivel calcular");
+                negIdade = true;
+                break;
 
-            }else if (idadeAux < 0){ // Codinção para quebrar o laço.
+            }else if (idadeAux < 0){
                 break;
             }
 
             c++;
             media = idade / c;
         }
-        if (negIdade ==  false){ // Para saber se no final é pra imprimir ou não a media.
+        if (negIdade ==  false){
         System.out.println(String.format("%.2f", media));
         }
 
